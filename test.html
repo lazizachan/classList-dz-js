@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Вызов функции при щелчке на элементе</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="bookList">
+        <li class="book">1.Kniga1</li>
+        <li class="book">2.Kniga2</li>
+        <li class="book">3.Kniga3</li>
+        <li class="book">4.Kniga4</li>
+        <li class="book">5.Kniga5</li>
+        <li class="book">6.Kniga6</li>
+        <li class="book">7.Kniga7</li>
+      </ul>
+    </div>
+
+    <script>
+      // Получаем элемент "1.Kniga1"
+      const book1 = document.querySelector(".bookList li:first-child");
+
+      // Функция, которая будет вызываться при щелчке на элементе "1.Kniga1"
+      function handleClick() {
+        alert('Функция вызвана при щелчке на элементе "1.Kniga1"');
+        // Здесь вы можете выполнить любые действия, которые нужно выполнить при щелчке на этом элементе
+      }
+
+      // Добавляем обработчик события "click" к элементу "1.Kniga1"
+      book1.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>
